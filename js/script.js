@@ -5,8 +5,8 @@ numero e per i multipli di 5 stampi Buzz.
 Per i numeri che sono sia multipli di 3 che di 5 stampi FizzBuzz.
  */
 //vars
-var message= document.getElementById("message");
-var fb="";
+var message = document.getElementById("message");
+var fb = "";
 
 for (var i = 1; i <= 100; i++) {
     //for multiple of 3
@@ -16,13 +16,22 @@ for (var i = 1; i <= 100; i++) {
     //test condition and debug inline 
     console.log(f ? b ? "FizzBuzz" : "Fizz" : b ? "Buzz" : i);
 
-    fb+=(f ? b ? "FizzBuzz".toUpperCase() : "Fizz" : b ? "Buzz" : i.toString());
-    fb+=" ";
-    //each 15 values writes a new line 
-    if(i % 15==0){
-        fb+="\n";
+    // fb+=(f ? b ? "FizzBuzz".toUpperCase() : "Fizz" : b ? "Buzz" : i.toString());
+    if (f && b) {
+        fb += "FizzBuzz".toUpperCase();
+    } else if (f) {
+        fb += "Fizz";
+    } else if (b) {
+        fb += "Buzz";
+    } else {
+        fb += i.toString();
     }
-  }
- //write in html + debug inline
-  console.log(fb);
-  message.innerText=fb;
+    fb += " ";
+    //each 15 values writes a new line 
+    if (i % 15 == 0) {
+        fb += "\n";
+    }
+}
+//write in html + debug inline
+console.log(fb);
+message.innerText = fb;

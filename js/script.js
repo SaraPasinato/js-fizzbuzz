@@ -4,4 +4,25 @@ ma per i multipli di 3 stampi “Fizz” al posto del
 numero e per i multipli di 5 stampi Buzz.
 Per i numeri che sono sia multipli di 3 che di 5 stampi FizzBuzz.
  */
+//vars
+var message= document.getElementById("message");
+var fb="";
 
+for (var i = 1; i <= 100; i++) {
+    //for multiple of 3
+    var f = i % 3 == 0;
+    //for multiple of 5
+    var b = i % 5 == 0;
+    //test condition and debug inline 
+    console.log(f ? b ? "FizzBuzz" : "Fizz" : b ? "Buzz" : i);
+
+    fb+=(f ? b ? "FizzBuzz" : "Fizz" : b ? "Buzz" : i.toString());
+    fb+=" ";
+    //each 15 values writes a new line 
+    if(i % 15==0){
+        fb+="\n";
+    }
+  }
+ //wrtie in html
+  console.log(fb);
+  message.innerText=fb;

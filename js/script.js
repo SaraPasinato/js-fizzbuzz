@@ -23,6 +23,6 @@ for (var i = 1; i <= 100; i++) {
         fb+="\n";
     }
   }
- //wrtie in html
+ //write in html + debug inline
   console.log(fb);
   message.innerText=fb;

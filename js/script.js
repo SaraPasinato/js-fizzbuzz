@@ -16,7 +16,7 @@ for (var i = 1; i <= 100; i++) {
     //test condition and debug inline 
     console.log(f ? b ? "FizzBuzz" : "Fizz" : b ? "Buzz" : i);
 
-    fb+=(f ? b ? "FizzBuzz" : "Fizz" : b ? "Buzz" : i.toString());
+    fb+=(f ? b ? "FizzBuzz".toUpperCase() : "Fizz" : b ? "Buzz" : i.toString());
     fb+=" ";
     //each 15 values writes a new line 
     if(i % 15==0){
